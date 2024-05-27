@@ -1,19 +1,33 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Experiences from "./pages/Experiences";
+import Etudes from "./pages/Etudes";
+
+
+
 
 function App() {
+  var [content, setContent] = useState(Home()); 
+  function navigateTo(to_page){
+    switch(to_page){
+      case "Home":
+        setContent(Home());
+        break;
+      case "Experiences":
+        setContent(Experiences());
+        break;
+      case "Etudes":
+        setContent(Etudes());
+        break;
+      default:break;
+    }
+  }
+
   return (
-    <div className="text-white w-screen h-screen bg-gradient-to-tr from-darker via-lighter via-80% to-darker">
-      <Navbar/>
-      <div className="mx-20 mt-20 flex flex-col md:flex-row justify-between">
-        <div className="flex flex-col space-y-6">
-          <h1 className="text-9xl font-bold">RECCHIA</h1>
-          <h1 className="text-7xl font-bold">Michel</h1>
-          <p className="text-4xl font-normal">Développeur professionnel</p>
-        </div>
-        <div>
-          <span>Contact me</span>
-        </div>
-      </div>
+    <div className="text-white h-screen w-screen bg-gradient-to-tr from-darker via-lighter via-80% to-darker">
+      <Navbar navigate={navigateTo} />
+      {content}
       
       
     </div>

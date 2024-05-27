@@ -1,8 +1,8 @@
 function NavbarItem(props) {
     return (
-        <a>
+        <button onClick={()=>{props.navigate()}}>
             <h2 className="text-white">{props.title}</h2>
-        </a>
+        </button>
     );
 }
 export default NavbarItem;
