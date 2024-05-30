@@ -1,6 +1,6 @@
 function NavbarItem(props) {
     return (
-        <button onClick={()=>{props.navigate()}}>
+        <button >
             <h2 className="text-white">{props.title}</h2>
         </button>
     );

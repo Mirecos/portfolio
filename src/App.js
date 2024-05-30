@@ -1,35 +1,18 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Experiences from "./pages/Experiences";
-import Etudes from "./pages/Etudes";
-
-
-
+import Welcome from "./components/Welcome";
+import PoweredByLabel from "./components/PoweredByLabel";
+import ContactCard from "./components/ContactCard";
+import Experiences from "./components/Experiences";
 
 function App() {
-  var [content, setContent] = useState(Home()); 
-  function navigateTo(to_page){
-    switch(to_page){
-      case "Home":
-        setContent(Home());
-        break;
-      case "Experiences":
-        setContent(Experiences());
-        break;
-      case "Etudes":
-        setContent(Etudes());
-        break;
-      default:break;
-    }
-  }
 
   return (
-    <div className="text-white h-screen w-screen bg-gradient-to-tr from-darker via-lighter via-80% to-darker">
-      <Navbar navigate={navigateTo} />
-      {content}
-      
-      
+    <div className="text-white h-screen w-screen bg-gradient-to-tr from-darker via-lighter via-80% to-darker flex flex-col">
+      <Navbar />
+      <Welcome/>
+      <Experiences/>
+      <ContactCard/>
+      <PoweredByLabel/>
     </div>
   );
 }
