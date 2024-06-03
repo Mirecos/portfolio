@@ -10,7 +10,8 @@ module.exports = {
        'lighter': '#2F4160',
        'card': '#1E293B',
        'border': '#353F4F',
-       'text': '#6DB8DD'
+       'text': '#6DB8DD',
+       'gray-bg': '#F3F4F5'
       },
 
      }

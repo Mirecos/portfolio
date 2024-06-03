@@ -1,7 +1,13 @@
 function NavbarItem(props) {
+    const handleClick = () => {
+        const element = document.getElementById(props.title);
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    
+
     return (
-        <button >
-            <h2 className="text-white">{props.title}</h2>
+        <button onClick={handleClick} className="hover:scale-125 hover:text-text">
+            <h2 className="">{props.title}</h2>
         </button>
     );
 }
