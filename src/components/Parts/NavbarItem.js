@@ -6,7 +6,7 @@ function NavbarItem(props) {
     
 
     return (
-        <button onClick={handleClick} className="hover:scale-125 hover:text-text">
+        <button onClick={handleClick} className="active:scale-125 active:text-text">
             <h2 className="">{props.title}</h2>
         </button>
     );

@@ -4,10 +4,17 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Divider from "./components/Parts/Divider";
 import Projects from "./components/Projects";
+import { useScroll } from "framer-motion"
+import { motion } from "framer-motion";
 
 function App() {
+  const { scrollYProgress } = useScroll()
+  console.log(scrollYProgress)
+
+// <motion.div style={{scaleX: scrollYProgress}} className="bg-cyan-200 h-2 sticky top-0 z-50"/>
   return (
     <div className="text-white h-full w-full bg-gradient-to-tr from-darker via-lighter via-80% to-darker flex flex-col space-y-8">
+      <motion.div></motion.div>
       <Navbar />
       <Header />
       <div className="text-black">

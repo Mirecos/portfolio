@@ -33,12 +33,13 @@ function Etudes() {
       id="Etudes"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 4 }}
     >
       <h1 className="text-center text-4xl font-bold">Études :</h1>
       <Chrono
         items={items}
         mode={mod}
+        disableInteraction={true}
         disableToolbar={true}
         enableBreakPoint={false}
         useReadMore={false}

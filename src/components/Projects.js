@@ -22,7 +22,7 @@ function Projects() {
       className="bg-gray-bg flex flex-col space-y-8 py-4"
       id="Projets"
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 2 }}
     >
       <h1 className="text-center text-4xl font-bold">Projets :</h1>
